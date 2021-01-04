@@ -4,7 +4,7 @@ let string2 = '';
 
 const player = {
   id: undefined,
-  time: 40,
+  time: 25,
   //界面ui
   ui: {
     text: document.querySelector("#text"),
@@ -69,7 +69,7 @@ const player = {
   },
   normal: () => {
     player.pause();
-    player.time = 40;
+    player.time = 25;
     player.play();
   },
   fast: () => {
