@@ -1,5 +1,10 @@
 # 开发
 ```
 yarn global add parcel-bundler
-parcel src/main.html
+parcel src/index.html
+```
+# build 命令
+```
+rm -rf dist
+parcel build src/index.html --no-minify --public-url ./
 ```
