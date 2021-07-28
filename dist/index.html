@@ -1,39 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>皮卡丘</title>
+    <title>画皮卡丘</title>
     <link rel="stylesheet" href="/style.e308ff8e.css">
+    <style id="styleTag"></style>
   <script src="/style.e308ff8e.js"></script></head>
   <body>
-    <div class="skin">
-      <!-- 眼睛 -->
-      <div class="eye left"></div>
-      <div class="eye right"></div>
-      <!-- 鼻子 -->
-      <div class="nose"></div>
-      <!-- 脸 -->
-      <div class="face left">
-        <img src="/flash.3547b3af.gif" alt="">
-      </div>
-      <div class="face right">
-        <img src="/flash.3547b3af.gif" alt="">
-      </div>
-      <!-- 嘴巴 -->
-      <div class="mouth">
-          <div class="up">  <!--上嘴唇-->
+    <div>
+      <pre id="text"></pre>
+    </div>
+    <div id="buttons">
+      <button id="btnPause">暂停</button>
+      <button id="btnPlay">播放</button>
+      <button id="btnSlow">慢速</button>
+      <button id="btnNormal" class="active">中速</button>
+      <button id="btnFast">快速</button>
+    </div>
+    <div id="wrapper">
+      <div class="skin">
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+        <div class="nose"></div>
+        <div class="face left"></div>
+        <div class="face right"></div>
+        <div class="mouth">
+          <div class="up">
             <div class="lip left"></div>
             <div class="lip right"></div>
           </div>
           <div class="down">
-            <div class="yuan1">
-              <div class="yuan2"></div>
-            </div>
-          </div>  <!--下嘴唇-->
+            <div class="yuan1"></div>
+          </div>
+        </div>
       </div>
     </div>
-    <script src="/main.1f19ae8e.js"></script>
+    <script src="/src.e31bb0bc.js"></script>
   </body>
 </html>
