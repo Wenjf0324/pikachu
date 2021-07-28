@@ -1,29 +1,22 @@
-const string = ` /* 你好，我是温金凤
+const string = `/* 你好，我是温金凤
  * 接下来我演示一下如何画一只皮卡丘
  * 首先，需要准备皮卡丘的皮肤
  */
 .skin {
-    background: #ffe432;
+    background: #fee433;
 }
 /*
  * 接下来，画皮卡丘的鼻子
  */
 .nose {
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
     border: 10px solid #000;
     border-color: #000 transparent transparent;
-    border-bottom: none;
-    position: relative;
-    left: 50%;
-    top: 145px;
-    margin-left: -10px;
-    z-index: 10;
 }
-.yuan {
-    position: absolute;
-    top: -15px;
-    left: -10px;
+.nose:before {
+    content: "";
+    display: block;
     width: 20px;
     height: 5px;
     background: #000;
@@ -33,30 +26,23 @@ const string = ` /* 你好，我是温金凤
  * 接下来，画皮卡丘的眼睛
  */
 .eye {
-    width: 49px;
-    height: 49px;
     background: #2e2e2e;
     border: 2px solid #000;
-    position: absolute;
-    left: 50%;
-    top: 120px;
-    margin-left: -32px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
 } 
 /*
  * 眼睛里面的珠子
  */
-.eye::before {
+.eye:before {
     content: "";
     display: block;
     border: 2px solid #000;
-    width: 24px;
-    height: 24px;
     background: #fff;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
-    position: absolute;
-    left: 4px;
-    top: 0px;
 }
 /*
  * 左眼
@@ -75,45 +61,31 @@ const string = ` /* 你好，我是温金凤
  *
  * 上嘴唇
  */
-.mouth .upperLip .lip {
+.mouth .up .lip {
+    border: 2px solid #000;
     height: 25px;
     width: 80px;
-    border: 2px solid #000;
-    position: absolute;
-    background: #ffe432;
+    background: #fee433;
 }
-.mouth .upperLip .lip.left {
-    right: 25%;
+.mouth .up .lip.left {
     border-bottom-left-radius: 40px 25px;
     border-top: none;
     border-right: none;
-    transform: rotate(-20deg) translateX(-54px);
+    transform: rotate(-20deg);
 }
-.mouth .upperLip .lip.right {
-    left: 25%;
+.mouth .up .lip.right {
     border-bottom-right-radius: 40px 25px;
     border-top: none;
     border-left: none;
-    transform: rotate(20deg) translateX(54px);
+    transform: rotate(20deg);
 }
 /*
  * 下嘴唇
  */
-.mouth .down {
-    height: 115px;
-    position: absolute;
-    top: 8px;
-    width: 100%;
-    overflow: hidden;
-}
 .mouth .down .yuan1 {
-    border: 2px solid #000;
     width: 150px;
     height: 1000px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    margin-left: -75px;
+    border: 2px solid #000;
     border-radius: 75px / 350px;
     background: #9b000a;
     overflow: hidden;
@@ -121,14 +93,10 @@ const string = ` /* 你好，我是温金凤
 /*
  * 小舌头
  */
-.mouth .down .yuan1 .yuan2 {
+.mouth .down .yuan1:after {
     width: 200px;
     height: 300px;
     background: #ff485f;
-    position: absolute;
-    bottom: -210px;
-    left: 50%;
-    margin-left: -100px;
     border-radius: 100px / 150px;
 } 
 /*
@@ -139,24 +107,19 @@ const string = ` /* 你好，我是温金凤
     height: 68px;
     background: #f00;
     border: 2px solid #000;
-    position: absolute;
-    left: 50%;
-    top: 200px;
-    margin-left: -38px;
-    z-index: 3;
+    border-radius: 50%;
 }  
 /* 
  * 将脸放到正确的位置
  */
 .face.left {
     transform: translate(-140px);
-    border-radius: 50%;
 }
 .face.right {
     transform: translate(140px);
-    border-radius: 50%;
 }  
 /*
  * 好了，这只皮卡丘送给你
  */`;
-export default string; //导出
+
+export default string;
